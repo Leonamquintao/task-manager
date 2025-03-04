@@ -11,7 +11,7 @@ const FooterNav = ({ tasks }: { tasks: string[] }) => {
 					<Text style={styles.navText}
 						ellipsizeMode="tail"
 						numberOfLines={1}>
-							{item}
+						{item}
 					</Text>
 				</View>
 			))}

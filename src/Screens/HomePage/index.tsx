@@ -38,15 +38,15 @@ const HomePage = () => {
 	};
 
 	const handleRemoveTask = (index: number) => {
-    setCheckedTasks((prev) => {
-      const newChecked = { ...prev };
-      delete newChecked[index];
-      return newChecked;
-    });
+		setCheckedTasks((prev) => {
+			const newChecked = { ...prev };
+			delete newChecked[index];
+			return newChecked;
+		});
 		setTasks(tasks.filter((_, i) => i !== index));
 	};
 
-  const mapper = tasks.map((task) => task.title);
+	const mapper = tasks.map((task) => task.title);
 
 	return (
 		<View style={styles.container}>
@@ -65,19 +65,19 @@ const HomePage = () => {
 
 			{/* Add New Task Section */}
 			<View>
-        <TaskManager
-          newTask={newTask}
-            setNewTask={setNewTask}
-            handleAddTask={handleAddTask}
-          />
+				<TaskManager
+					newTask={newTask}
+					setNewTask={setNewTask}
+					handleAddTask={handleAddTask}
+				/>
 			</View>
 
 			{/* Bottom Navigation */}
-      <View style={styles.navSection}>
-        <ScrollView horizontal>
-          <FooterNav tasks={mapper} />
-        </ScrollView>
-      </View>
+			<View style={styles.navSection}>
+				<ScrollView horizontal>
+					<FooterNav tasks={mapper} />
+				</ScrollView>
+			</View>
 		</View>
 	);
 };
@@ -88,8 +88,8 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 	},
-  navSection: {
-    borderTopWidth: 1,
+	navSection: {
+		borderTopWidth: 1,
 		borderTopColor: '#E5E5E5',
-  },
+	},
 });
